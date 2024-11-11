@@ -1,0 +1,6 @@
+Repository to build the jupyter-based MBDA framework
+
+Coded by: José Camacho (josecamacho@ugr.es)
+Last Modification: 20/06/2024 
+
+Type "sh build.sh" to buid a MBDA image from scratch (with empty user database)
