@@ -1,6 +1,18 @@
 Repository to build the jupyter-based MBDA framework
 
 Coded by: José Camacho (josecamacho@ugr.es)
-Last Modification: 20/06/2024 
+Last Modification: 11/11/2024 
 
-Type "sh build.sh" to buid a MBDA image from scratch (with empty user database)
+Installation steps:
+- Clone this repository
+- Create folder ssl and include your certificate and key (cert.pem and key.pem)
+- Type "sh build.sh" to buid a MBDA image from scratch (with empty user database)
+
+If you don't have certificate and key, you need to comment the following lines in the Dockerfile:
+
+# COPY ssl/key.pem .
+# COPY ssl/cert.pem .
+# ENTRYPOINT ["jupyterhub", "-f", "/etc/jupyterhub/jupyterhub_config.py", "--ssl-key", "/etc/jupyterhub/key.pem", "--ssl-cert", "/etc/jupyterhub/cert.pem"]
+
+And uncomment the last line.
+
